@@ -12,7 +12,7 @@ Além dos pinos de alimentação, com GND e VCC = 5V (Tecnologia TTL), totalizan
 
 ## *Hardware*
 
-
+O hardware consiste em um demux 3x8( 74HC138N) que seleciona as camadas do cubo e 8 74HC164( Shift Register) em cascata que envia o dado para a camada selecionada a cada ciclo de clock, ao todo serão 64 ciclos de clock por camada. Como as saídas do demux8 são barradas foi usado 2 74LS14( porta NOT) para inverter a saída e enviar para 8 transistores 2N3904 que controlam as camadas.
 
 ## Biblioteca *cubo.h*
 * struct  cubo_reg é um bit field para conter os sinais de controle do cubo.
