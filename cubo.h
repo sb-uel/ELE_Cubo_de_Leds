@@ -25,12 +25,7 @@ struct cubo_reg {
 	unsigned char enable	: 1;
 };
 
-//uint8_t cubo_reg = 0;
 typedef struct cubo_reg cubo_r;
-//cubo_r cubo = {0};
-//uint8_t cubo_linha[8] = {0};
-//uint8_t nlinha = 0;
-//uint8_t nbit = 0;
 
 void atualiza_camada(cubo_r *cubo, uint8_t cubo_linha, uint8_t *nlinha, uint8_t *nbit);
 // atualiza_camada (&cubo, cubo_linha(nlinha), &nlinha, &nbit);
