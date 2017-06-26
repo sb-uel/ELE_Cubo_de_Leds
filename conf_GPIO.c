@@ -15,7 +15,15 @@ void GPIO_Inicia(void) {
 
 	GPIO_Type.GPIO_Mode = GPIO_Mode_Out_OD;
 	GPIO_Type.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Type.GPIO_Pin = Pin_DataBit|Pin_Demux|Pin_Clk|Pin_Enable;
+	GPIO_Type.GPIO_Pin = Pin_DataBit|Pin_Demux0|Pin_Demux1|Pin_Demux2|Pin_Clk|Pin_Enable;
 
 	GPIO_Init(GPIO_Cubo, &GPIO_Type); // Configura PC12 como pino de saída OD
+	GPIO_Write(GPIO_Cubo, 0x00);
+	GPIO_Write(GPIO_Cubo, 0x00);
+	GPIO_Write(GPIO_Cubo, 0x00);
+	GPIO_Write(GPIO_Cubo, 0x00);
+	GPIO_Write(GPIO_Cubo, 0x00);
+	GPIO_Write(GPIO_Cubo, 0x00);
+	GPIO_Write(GPIO_Cubo, 0x00);
+	GPIO_Write(GPIO_Cubo, 0x00);
 }
